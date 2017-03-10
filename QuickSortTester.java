@@ -1,8 +1,8 @@
 /*
-TrioOfTwo - Eric Chen, Aryan Bhatt
+Burgers - Eric Chen, Aryan Bhatt, Melanie Chow
 APCS2 pd4
-HW07 -- What Does the Data Say?
-2017-02-14
+Lab01 -- What Does the Data Say?
+2017-03-10
  */
 
 /*======================================
@@ -30,8 +30,45 @@ HW07 -- What Does the Data Say?
   The algorithm is O(n) runtime, as shown by a graph of time versus n, which is more or less a straight line.
   ======================================*/
 
-public class MergeSortTester 
+public class QuickSortTester 
 {
+    /*quicksort code*/
+    public static void swap(int[] arr, int i, int j){
+	int first=arr[i];
+	int second=arr[j];
+	arr[i]=second;
+	arr[j]=first;
+    }
+
+    public static void printarray(int [] a){
+	String retStr="[";
+	for (int i=0; i<a.length; i++){
+	    retStr+=" "+a[i];
+	}
+	System.out.println( retStr+=" ]");
+    }
+
+    public static int partition(int[] arr, int left, int right, int pvtPos){
+	int pvtVal=arr[pvtPos];
+	swap(arr,pvtPos,right);
+	int storePos=left;
+	for (int i=left; i<right; i++){
+	    if (arr[i]<=pvtVal){
+		swap (arr,storePos,i);
+		storePos+=1;
+	    }
+	}
+	swap(arr,right,storePos);
+	return storePos;
+    }
+
+    public static void quicksort(int[] arr, int left,int right){
+	if (left<right){
+	    int pvtPos=partition(arr,left,right,(left+right)/2);
+	    quicksort(arr,left, pvtPos-1);
+	    quicksort(arr,pvtPos+1,right);
+	    }
+    }
 
     /******************************
      * execution time analysis 
@@ -80,25 +117,25 @@ public class MergeSortTester
 
 	    // n1
 	    start = System.nanoTime();
-	    MergeSort.sort( n1 );
+	    quicksort( n1,0,n1.length-1 );
 	    elapsed = System.nanoTime() - start;
 	    n1t += elapsed;
 
 	    // n10
 	    start = System.nanoTime();
-	    MergeSort.sort( n10 );
+	    quicksort( n10,0,n10.length-1 );
 	    elapsed = System.nanoTime() - start;
 	    n10t += elapsed;
 
 	    // n100
 	    start = System.nanoTime();
-	    MergeSort.sort( n100 );
+	    quicksort( n100,0,n100.length-1 );
 	    elapsed = System.nanoTime() - start;
 	    n100t += elapsed;
 
 	    // n of bigSize
 	    start = System.nanoTime();
-	    MergeSort.sort( nbs );
+	    quicksort( nbs,0,nbs.length-1 );
 	    elapsed = System.nanoTime() - start;
 	    nbst += elapsed;
 	    
