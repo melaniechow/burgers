@@ -9,7 +9,7 @@ Worst-Case: O(nxlog(n)
  We tested the runtime by creating arrays of n items and timing how long it would take to perform quicksort on those arrays. We justified our best case and worst case classifications by thinking about how the arrays of each case would look and how it would change after partition. In the worst case, partition only partitions one item to a side (eg. choosing the minimum or maximum value in the bounds as the pvtPos). In that case, the bounds only detracts by 1. In the best case, the array is already sorted and the bounds would become smaller and smaller as the pvtPos would be the middle value. In this case the bounds detract quickly. However, in the big scale of things, we think that these big-ohs may be the same, espeically since the average case was nlogn as well. Choosing which pvtPos to partition did not really make a difference either, since in most cases we don't know the order of the array. 
   
 Mean execution times for dataset of size n:
-  Batch size: 5000
+  Batch size: 1000-50,000
   
   n=1000     time: 91,445 ns
   
@@ -21,7 +21,6 @@ Mean execution times for dataset of size n:
   
   n=5000     time: 500,748 ns
   
-  
   n=6000     time: 610,279 ns
   
   n=7000     time: 730,446 ns
@@ -32,6 +31,7 @@ Mean execution times for dataset of size n:
   
   n=10000    time: 1,129,605 ns
   
+  More data points are shown below. 
   
   This is our graph and our data table:
   ![alt tag](https://github.com/melaniechow/burgers/blob/master/graphs/tableandgraph.png)
