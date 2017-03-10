@@ -10,13 +10,13 @@ import cs1.Keyboard;
 /**======================================
   class QuickSortTester
 
-  ALGORITHM:
+  ALGORITHM:   We tested the runtime by creating arrays of n items and timing how long it would take to perform quicksort on those arrays. We find the start time in nanoseconds, run the sort() method, then subtract it from the end time in nanoseconds.  This number is added to a total, which will be divided by the batch size and printed to the terminal.  
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  O(n)
+  O(nlogn)
 
   Mean execution times for dataset of size n:
-  Batch size: 5000
+  Batch size: 10000 (for more data points and the analysis, read README file)
 
   n=1000     time: 91445
   n=2000     time: 183769
@@ -28,9 +28,6 @@ import cs1.Keyboard;
   n=8000     time: 845869
   n=9000     time: 940874
   n=10000    time: 1129605
-
-  ANALYSIS:
-  
 
   ======================================**/
 
@@ -76,7 +73,6 @@ public class QuickSortTester {
 
     /******************************
      * execution time analysis 
-     * We find the start time in nanoseconds, run the sort() method, then subtract it from the end time in nanoseconds.  This number is added to a total, which will be divided by the batch size and printed to the terminal.
      ******************************/
     public static void main( String[] args ) {
 
