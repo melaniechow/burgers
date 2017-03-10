@@ -1,14 +1,12 @@
 # burgers
 Members: Aryan Bhatt, Eric Chen, Melanie Chow
 
-    < your assessment of QuickSort’s Big-Oh runtime classification, abstracted to the algorithm level >
-
 QuickSort's Big-Oh Runtime Classifications:
 Best-Case:
 Average-Case: O( n x log(n) )
 Worst-Case:
 
-    < your methodology >
+ We tested the runtime by creating arrays of n items and timing how long it would take to perform quicksort on those arrays.
   
 Mean execution times for dataset of size n:
   Batch size: 5000
