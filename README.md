@@ -1,12 +1,14 @@
 # burgers
-      < your assessment of QuickSort’s Big-Oh runtime classification, abstracted to the algorithm level >
+Members: Aryan Bhatt, Eric Chen, Melanie Chow
+
+    < your assessment of QuickSort’s Big-Oh runtime classification, abstracted to the algorithm level >
 
 QuickSort's Big-Oh Runtime Classifications:
 Best-Case:
 Average-Case: O( n x log(n) )
 Worst-Case:
 
-      < your methodology >
+    < your methodology >
   
 Mean execution times for dataset of size n:
   Batch size: 5000
@@ -21,4 +23,4 @@ Mean execution times for dataset of size n:
   n=9000     time: 940,874 ns
   n=10000    time: 1,129,605 ns
   
-      < how pivot selection and data arrangement affect execution time. >
+    < how pivot selection and data arrangement affect execution time. >
