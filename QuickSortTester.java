@@ -17,15 +17,16 @@ import cs1.Keyboard;
 
   Mean execution times for dataset of size n:
   Batch size: 10000
-  n=1       time: <time>
-  n=10      time: <time>
-  n=100     time: <time>
-  n=200     time: <time>
-  n=300     time: <time>
-  n=400     time: <time>
-  n=500     time: <time>
+  n=1       time: 58 ns
+  n=10      time: 311 ns
+  n=100     time: 3286 ns
+  n=200     time: 7203 ns
+  n=300     time: 11470 ns
+  n=400     time: 16102 ns
+  n=500     time: 20285 ns
   ...
-  n=10000   time: <time>
+  n=1000    time: 44819 ns
+  n=10000   time: 512150 ns
 
   ANALYSIS:
   
@@ -80,13 +81,15 @@ public class QuickSortTester {
 
 	System.out.print( "Please specify test array size: " );
 	int size = Keyboard.readInt();
+	/**
 	System.out.print( "Please set how many trials you would like to run: " );
 	int batchSize = Keyboard.readInt();
+	**/
 
+	// SET BATCHSIZE HERE
+	int batchSize = 10000;
+	 
 	/**
-	 // SET BATCHSIZE HERE
-	 int batchSize = 10000;
-
 	 // SET SIZE HERE
 	 int size = 500;
 	**/
@@ -115,7 +118,7 @@ public class QuickSortTester {
 
 	t /= batchSize;
 	
-	System.out.println( " Average runtime for " + batchSize + " runs with " + size + " items: " + t );
+	System.out.println( " Average runtime for " + batchSize + " runs with " + size + " items: " + t + " nanoseconds." );
 
     }//end main
 
