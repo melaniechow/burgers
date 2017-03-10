@@ -2,11 +2,11 @@
 Members: Aryan Bhatt, Eric Chen, Melanie Chow
 
 QuickSort's Big-Oh Runtime Classifications:
-Best-Case:
+Best-Case: O(nxlog(n))
 Average-Case: O( n x log(n) )
-Worst-Case:
+Worst-Case: O(nxlog(n)
 
- We tested the runtime by creating arrays of n items and timing how long it would take to perform quicksort on those arrays.
+ We tested the runtime by creating arrays of n items and timing how long it would take to perform quicksort on those arrays. We justified our best case and worst case classifications by thinking about how the arrays of each case would look and how it would change after partition. In the worst case, partition only partitions one item to a side (eg. choosing the minimum or maximum value in the bounds as the pvtPos). In that case, the bounds only detracts by 1. In the best case, the array is already sorted and the bounds would become smaller and smaller as the pvtPos would be the middle value. In this case the bounds detract quickly. However, in the big scale of things, we think that these big-ohs may be the same, espeically since the average case was nlogn as well. 
   
 Mean execution times for dataset of size n:
   Batch size: 5000
