@@ -16,17 +16,18 @@ import cs1.Keyboard;
   O(n)
 
   Mean execution times for dataset of size n:
-  Batch size: 10000
-  n=1       time: 58 ns
-  n=10      time: 311 ns
-  n=100     time: 3286 ns
-  n=200     time: 7203 ns
-  n=300     time: 11470 ns
-  n=400     time: 16102 ns
-  n=500     time: 20285 ns
-  ...
-  n=1000    time: 44819 ns
-  n=10000   time: 512150 ns
+  Batch size: 5000
+
+  n=1000     time: 91445
+  n=2000     time: 183769
+  n=3000     time: 313521
+  n=4000     time: 405829
+  n=5000     time: 500748
+  n=6000     time: 610279
+  n=7000     time: 730446
+  n=8000     time: 845869
+  n=9000     time: 940874
+  n=10000    time: 1129605
 
   ANALYSIS:
   
@@ -87,7 +88,7 @@ public class QuickSortTester {
 	**/
 
 	// SET BATCHSIZE HERE
-	int batchSize = 10000;
+	int batchSize = 5000;
 	 
 	/**
 	 // SET SIZE HERE
